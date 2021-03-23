@@ -1,4 +1,4 @@
-# Algorithms and Data Structures custom implementation with TypeScript
+# Most known Algorithms and Data Structures implementation with TypeScript
 **Algorithms List:**
 * Bubble Sort 
 
