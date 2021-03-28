@@ -1,4 +1,4 @@
-# Most known Algorithms and Data Structures implementation with TypeScript. All Algorithms and Data Structures have tests. List of implemented algs and ds below.
+# Most known Algorithms and Data Structures implementation with TypeScript. All code is covered with tests. List of implemented items below.
 **Algorithms List:**
 * Bubble Sort 
 
