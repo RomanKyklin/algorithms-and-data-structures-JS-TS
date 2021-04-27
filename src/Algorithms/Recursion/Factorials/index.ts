@@ -17,5 +17,5 @@ export const factorialsRecursive = (num: number): number | null => {
 
     if (num < 2 && num > -1) return 1;
 
-    return num;
+    return num * factorialsRecursive(num - 1);
 }
