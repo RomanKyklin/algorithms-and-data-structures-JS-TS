@@ -17,13 +17,14 @@ export const insertionSort = (arr: number[]): number[] => {
                     let tmp = result[currentNonSortedIndex];
                     result[currentNonSortedIndex] = result[i];
                     result[i] = tmp;
-                    console.log('if statement', result);
+                    console.log('iteration', i, result);
                 } else {
                     currentSortedIndex++;
                     currentNonSortedIndex++;
                     break;
                 }
             }
+            console.log('currentNonSortedIndex', currentNonSortedIndex, currentSortedIndex)
         } else {
             console.log('sorted')
             nonSorted = false;
@@ -33,4 +34,5 @@ export const insertionSort = (arr: number[]): number[] => {
     return result;
 }
 
-console.log(insertionSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
+console.log(insertionSort([10, 5, 3]));
+// console.log(insertionSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
