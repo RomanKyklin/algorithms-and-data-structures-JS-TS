@@ -3,7 +3,8 @@
 * Factorials (recursive and iterative solution) 
 * Fibonacci (recursive and iterative solution) 
 * Bubble Sort
-* Insertion-Sort
+* Insertion Sort
+* Selection Sort
 
 **Data Structures List:** 
 * Stack
