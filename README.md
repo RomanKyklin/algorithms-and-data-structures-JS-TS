@@ -10,6 +10,7 @@
 * Heap Sort
 
 **Data Structures List:** 
+* Set
 * Stack
 * Queue
 * Priority Queue
