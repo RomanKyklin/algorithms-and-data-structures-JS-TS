@@ -7,6 +7,7 @@
 * Selection Sort
 * Merge Sort 
 * Quick Sort 
+* Heap Sort
 
 **Data Structures List:** 
 * Stack
