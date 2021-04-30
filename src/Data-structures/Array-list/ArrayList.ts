@@ -15,6 +15,14 @@ export class ArrayList implements IArrayList {
         if (this.data[index]) {
             delete this.data[index];
             this.length -= 1;
+
+            if (index !== this.length - 1) {
+                for (let prop in this.data) {
+                    if (Number(prop) > index) {
+                        this.data[Number(prop) - 1] = this.data[prop];
+                    }
+                }
+            }
         }
     }
 
