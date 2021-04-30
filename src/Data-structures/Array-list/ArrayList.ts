@@ -17,11 +17,7 @@ export class ArrayList implements IArrayList {
             this.length -= 1;
 
             if (index !== this.length - 1) {
-                for (let prop in this.data) {
-                    if (Number(prop) > index) {
-                        this.data[Number(prop) - 1] = this.data[prop];
-                    }
-                }
+                this.collapseTo(index);
             }
         }
     }
@@ -43,5 +39,13 @@ export class ArrayList implements IArrayList {
     push(element: any): void {
         this.data[this.length] = element;
         this.length += 1;
+    }
+
+    private collapseTo(index: number) {
+        for (let prop in this.data) {
+            if (Number(prop) > index) {
+                this.data[Number(prop) - 1] = this.data[prop];
+            }
+        }
     }
 }
