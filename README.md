@@ -15,7 +15,7 @@
 * Stack
 * Queue
 * Priority Queue
-* List 
-* Doubly List
-* Circular doubly list
+* Linked List 
+* Doubly Linked List
+* Circular doubly linked list
 
