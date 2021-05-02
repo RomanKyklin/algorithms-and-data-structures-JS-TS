@@ -1,5 +1,12 @@
 # Most known Algorithms and Data Structures implementation with TypeScript. All code is covered with tests. List of implemented items below.
 **Problem solving patterns:**
+* Frequency counter
+* Multiple Pointers
+* Sliding window 
+* Devide and Conquer 
+* Dynamic programming 
+* Greedy algorithms 
+* Backtracking
 
 **Algorithms List:**
 * Factorials (recursive and iterative solution) 
