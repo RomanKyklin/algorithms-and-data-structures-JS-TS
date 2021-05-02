@@ -27,11 +27,27 @@ export const validAnagram = (str1: string, str2: string): boolean => {
     return true;
 }
 
+export const validAnagramFrequencyCounters = (str1: string, str2: string): boolean => {
+    let frequencyCounter1: { [key: string]: number } = {};
 
-console.log(validAnagram('', '')) // true
-console.log(validAnagram('aaz', 'zza')) // false
-console.log(validAnagram('anagram', 'nagaram')) // true
-console.log(validAnagram("rat", "car")) // false) // false
-console.log(validAnagram('awesome', 'awesom')) // false
-console.log(validAnagram('qwerty', 'qeywrt'))// true
-console.log(validAnagram('texttwisttime', 'timetwisttext'))// true
+    for (let i = 0; i < str2.length; i++) {
+        frequencyCounter1[str2[i]] = frequencyCounter1[str2[i]] + 1 || 1;
+    }
+
+    for (let i = 0; i < str1.length; i++) {
+        if (frequencyCounter1[str1[i]] === undefined || frequencyCounter1[str1[i]] === 0) {
+            return false;
+        }
+        frequencyCounter1[str1[i]] = frequencyCounter1[str1[i]] - 1;
+    }
+
+    return true;
+}
+
+console.log(validAnagramFrequencyCounters('', '')) // true
+console.log(validAnagramFrequencyCounters('aaz', 'zza')) // false
+console.log(validAnagramFrequencyCounters('anagram', 'nagaram')) // true
+console.log(validAnagramFrequencyCounters("rat", "car")) // false) // false
+console.log(validAnagramFrequencyCounters('awesome', 'awesom')) // false
+console.log(validAnagramFrequencyCounters('qwerty', 'qeywrt'))// true
+console.log(validAnagramFrequencyCounters('texttwisttime', 'timetwisttext'))// true
