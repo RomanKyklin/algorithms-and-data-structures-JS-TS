@@ -1,4 +1,6 @@
 # Most known Algorithms and Data Structures implementation with TypeScript. All code is covered with tests. List of implemented items below.
+**Problem solving patterns:**
+
 **Algorithms List:**
 * Factorials (recursive and iterative solution) 
 * Fibonacci (recursive and iterative solution) 
