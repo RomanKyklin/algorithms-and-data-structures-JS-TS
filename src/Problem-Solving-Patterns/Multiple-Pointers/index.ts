@@ -12,8 +12,21 @@
     values that sum to zero or undefined if a pair does not exist
  */
 
+/**
+ * Naive solution
+ * Time Complexity - O(N^2)
+ * Space Complexity - O(1)
+ * @param {Array<number>} arr
+ * @return {Array<number>}
+ */
 const sumZero = (arr: number[]): number[] => {
-    return [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === 0) {
+                return [arr[i], arr[j]];
+            }
+        }
+    }
 }
 
 const sumZeroFrequencyPattern = (arr: number[]): number[] => {
