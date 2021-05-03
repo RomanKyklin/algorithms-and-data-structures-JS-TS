@@ -39,11 +39,11 @@ const sumZero = (arr: number[]): number[] => {
 const sumZeroFrequencyPattern = (arr: number[]): number[] => {
     let left = 0;
     let right = arr.length - 1;
-    while(left < right){
+    while (left < right) {
         let sum = arr[left] + arr[right];
-        if(sum === 0){
+        if (sum === 0) {
             return [arr[left], arr[right]];
-        } else if(sum > 0){
+        } else if (sum > 0) {
             right--;
         } else {
             left++;
@@ -51,6 +51,11 @@ const sumZeroFrequencyPattern = (arr: number[]): number[] => {
     }
 }
 
-console.log(sumZeroFrequencyPattern([-3, -2, -1, 0, 1, 2, 3])) // [-3,3]
-console.log(sumZeroFrequencyPattern([-2, 0, 1, 3])) // undefined
-console.log(sumZeroFrequencyPattern([1, 2, 3])) // undefined
+const countUniqueValues = (arr: number[]): number => {
+    return 1;
+}
+
+countUniqueValues([1, 1, 1, 1, 1, 2]) // 2
+countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]) // 7
+countUniqueValues([]) // 0
+countUniqueValues([-2, -1, -1, 0, 1]) // 4
