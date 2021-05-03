@@ -33,6 +33,6 @@ const sumZeroFrequencyPattern = (arr: number[]): number[] => {
     return [];
 }
 
-sumZero([-3, -2, -1, 0, 1, 2, 3]) // [-3,3]
-sumZero([-2, 0, 1, 3]) // undefined
-sumZero([1, 2, 3]) // undefined
+console.log(sumZero([-3, -2, -1, 0, 1, 2, 3])) // [-3,3]
+console.log(sumZero([-2, 0, 1, 3])) // undefined
+console.log(sumZero([1, 2, 3])) // undefined
