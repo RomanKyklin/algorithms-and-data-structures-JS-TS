@@ -12,12 +12,29 @@
  **/
 
 /**
+ * A Native approach
+ * Time Complexity - O(N^2)
  * @return {number}
  * @param {Array<number>} arr
  * @param {number} num
  */
 const maxSubarraySum = (arr: number[], num: number): number => {
-    return 1;
+    if (num > arr.length) {
+        return null;
+    }
+    let max = -Infinity;
+    let temp: number;
+
+    for (let i = 0; i < arr.length - num + 1; i++) {
+        temp = 0;
+        for (let j = 0; j < num; j++) {
+            temp += arr[i + j];
+        }
+        if (temp > max) {
+            max = temp;
+        }
+    }
+    return max;
 }
 
 maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2) // 10
