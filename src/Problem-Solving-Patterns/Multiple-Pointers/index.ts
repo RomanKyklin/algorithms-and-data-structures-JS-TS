@@ -71,13 +71,28 @@ const countUniqueValues = (arr: number[]): number => {
     return result.length;
 }
 
+/**
+ * Optimized solution with multiple pointers pattern
+ * @return {number}
+ * @param {Array<number>} arr
+ */
 const countUniqueValuesMultiplePointers = (arr: number[]): number => {
-    let result = 0;
+    if (arr.length === 0) return 0;
 
-    return 1;
+    let result = 1;
+    let startIndex = 0;
+    let nextIndex = 1;
+
+    do {
+        if (arr[startIndex] !== arr[nextIndex]) result += 1;
+        startIndex += 1;
+        nextIndex += 1;
+    } while (arr[startIndex] != null && arr[nextIndex] != null);
+
+    return result;
 }
 
-console.log(countUniqueValues([1, 1, 1, 1, 1, 2])) // 2
-console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13])) // 7
-console.log(countUniqueValues([])) // 0
-console.log(countUniqueValues([-2, -1, -1, 0, 1])) // 4
+console.log(countUniqueValuesMultiplePointers([1, 1, 1, 1, 1, 2])) // 2
+console.log(countUniqueValuesMultiplePointers([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13])) // 7
+console.log(countUniqueValuesMultiplePointers([])) // 0
+console.log(countUniqueValuesMultiplePointers([-2, -1, -1, 0, 1])) // 4
