@@ -37,6 +37,28 @@ const maxSubarraySum = (arr: number[], num: number): number => {
     return max;
 }
 
+/**
+ * An Optimized approach with sliding window pattern
+ * Time Complexity - O(N)
+ * @return {number}
+ * @param {Array<number>} arr
+ * @param {number} num
+ */
+const maxSubarraySumSlidingWindow = (arr: number[], num: number): number => {
+    let maxSum = 0;
+    let tempSum = 0;
+    if (arr.length < num) return null;
+    for (let i = 0; i < num; i++) {
+        maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (let i = num; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+}
+
 maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2) // 10
 maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4) // 17
 maxSubarraySum([4, 2, 1, 6], 1) // 6
