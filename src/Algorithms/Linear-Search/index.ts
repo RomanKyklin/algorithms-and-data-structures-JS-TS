@@ -3,6 +3,7 @@
  * BigO - worst O(n), best O(1)
  * @param {Array<*>} arr
  * @param {*} search
+ * @return {number | null}
  */
 export const linearSearch = (arr: any[], search: any): number | null => {
     for (let i = 0; i < arr.length; i++) {

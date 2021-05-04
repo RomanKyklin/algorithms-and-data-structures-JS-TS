@@ -3,6 +3,7 @@
  * BigO - worst and average O(logN), best O(1)
  * @param {Array<*>} arr
  * @param {*} search
+ * @return {number | null}
  */
 export const binarySearch = (arr: any[], search: any): number | null => {
     let currentIndex = Math.floor(arr.length / 2);
