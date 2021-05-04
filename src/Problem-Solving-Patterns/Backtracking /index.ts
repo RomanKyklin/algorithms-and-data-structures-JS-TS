@@ -8,14 +8,3 @@
  * 2. Optimisation problem used to find the best solution that can be applied.
  * 3. Enumeration problem used to find the set of all feasible solutions of the problem
  **/
-
-/**
- * TODO ALGORITHMS EXAMPLES
- * 1. MERGE SORT
- * 2. BINARY SEARCH
- * 3. Quick Sort
- * 4. Fast Exponentiation
- * 5. Strassen’s Algorithm
- * 6. Kasturba Algorithm
- * 7. Closest Pair of Points
- */
