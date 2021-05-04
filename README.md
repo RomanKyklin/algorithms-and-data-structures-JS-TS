@@ -9,6 +9,8 @@
 * Backtracking
 
 **Algorithms List:**
+* Linear Search
+* Binary Search
 * Factorials (recursive and iterative solution) 
 * Fibonacci (recursive and iterative solution) 
 * Bubble Sort
