@@ -11,6 +11,7 @@
 **Algorithms List:**
 * Linear Search
 * Binary Search
+* Naive String Search
 * Factorials (recursive and iterative solution) 
 * Fibonacci (recursive and iterative solution) 
 * Bubble Sort
