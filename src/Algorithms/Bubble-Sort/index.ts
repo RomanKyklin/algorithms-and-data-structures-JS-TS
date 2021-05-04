@@ -1,4 +1,5 @@
 /**
+ * BigO - average O(n^2), best O(n)
  * @param {Array} arr
  * @return {Array}
  */
