@@ -17,6 +17,8 @@
 * Merge Sort 
 * Quick Sort 
 * Heap Sort
+* Timsort
+* Bloom filter
 
 **Data Structures List:** 
 * Array List
