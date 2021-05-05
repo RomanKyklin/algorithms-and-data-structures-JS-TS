@@ -4,18 +4,29 @@
  * @param {Array<number>} arr
  */
 export const selectionSort = (arr: number[]): number[] => {
-    let isSwapped;
     let min;
-    let sortedIndex;
+    let arrCopy = [...arr];
+    let sortedIndex = 0;
+    let minIndex = 0;
 
-    do {
-        isSwapped = false;
-
-        for (let i = 0; i < arr.length; i++) {
-
+    while (arrCopy[sortedIndex] != null) {
+        for (let i = sortedIndex; i < arrCopy.length; i++) {
+            if (min == null || arrCopy[i] < min) {
+                min = arrCopy[i];
+                minIndex = i;
+            }
         }
 
-    } while (isSwapped)
+        let tmp = arrCopy[sortedIndex];
+        arrCopy[sortedIndex] = min;
+        arrCopy[minIndex] = tmp;
+        sortedIndex += 1;
+        min = null;
+    }
 
-    return [];
+    return arrCopy;
 }
+
+const nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1];
+const expectedResult = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(selectionSort(nums))
