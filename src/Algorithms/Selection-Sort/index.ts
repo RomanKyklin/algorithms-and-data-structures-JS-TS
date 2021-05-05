@@ -1,5 +1,6 @@
 /**
  * Selection sort algorithm implementation
+ * BigO - O(n^2)
  * @return {Array<number>}
  * @param {Array<number>} arr
  */
