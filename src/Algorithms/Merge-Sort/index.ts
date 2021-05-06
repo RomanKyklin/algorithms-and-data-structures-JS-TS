@@ -5,12 +5,16 @@
  * @return {Array}
  **/
 export const mergeSort = (arr: number[]): number[] => {
-    if (arr.length <= 1) return arr;
+    if (arr.length <= 1) {
+        console.log('return arr', arr);
+        return arr
+    }
+    console.log(arr);
 
-    let arrCopy = [...arr];
-
-
-    return arrCopy;
+    return merge(
+        mergeSort(arr.splice(Math.floor(arr.length / 2), arr.length - 1)),
+        mergeSort(arr)
+    );
 }
 
 /**
@@ -22,19 +26,16 @@ export const mergeSort = (arr: number[]): number[] => {
 export const merge = (firstArr: number[], secondArr: number[]): number[] => {
     let firstArrSortedIndex = 0;
     let secondArrSortedIndex = 0;
-    let isSorted = false;
     let result: number[] = [];
 
-    while (!isSorted) {
+    while (true) {
         if (!firstArr[firstArrSortedIndex]) {
-            result = [...result, ...secondArr.splice(secondArrSortedIndex, secondArr.length - 1)];
-            isSorted = true;
+            result = [...result, ...secondArr.splice(secondArrSortedIndex, secondArr.length)];
             break;
         }
 
         if (!secondArr[secondArrSortedIndex]) {
-            result = [...result, ...firstArr.splice(firstArrSortedIndex, firstArr.length - 1)];
-            isSorted = true;
+            result = [...result, ...firstArr.splice(firstArrSortedIndex, firstArr.length)];
             break;
         }
 
@@ -52,5 +53,3 @@ export const merge = (firstArr: number[], secondArr: number[]): number[] => {
 
     return result;
 }
-
-console.log(merge([1, 2, 3], [6, 7, 10]))
