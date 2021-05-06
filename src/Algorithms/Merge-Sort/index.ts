@@ -1,6 +1,7 @@
 /**
  * Merge sort algorithms implemented
- * Overall time complexity of Insertion sort is O(n2)
+ * Time complexity of Merge Sort - Best: O(nLogN), Average: O(nLogN), Worst: O(nLogN)
+ * Space complexity of Merge Sort - O(n)
  * @param {Array} arr
  * @return {Array}
  **/
