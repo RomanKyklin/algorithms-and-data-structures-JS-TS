@@ -9,14 +9,7 @@ export const mergeSort = (arr: number[]): number[] => {
 
     let arrCopy = [...arr];
 
-    for (let i = 1; i < arrCopy.length; i++) {
 
-        let k = i;
-        while (k > 0 && arrCopy[k - 1] > arrCopy[k]) {
-            [arrCopy[k], arrCopy[k - 1]] = [arrCopy[k - 1], arrCopy[k]];
-            k -= 1;
-        }
-    }
 
     return arrCopy;
 }
