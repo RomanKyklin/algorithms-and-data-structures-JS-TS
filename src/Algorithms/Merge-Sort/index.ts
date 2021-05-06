@@ -10,6 +10,15 @@ export const mergeSort = (arr: number[]): number[] => {
     let arrCopy = [...arr];
 
 
-
     return arrCopy;
+}
+
+/**
+ * Merging sorted arrays into one sorted array
+ * @param {Array<number>} firstArr
+ * @param {Array<number>} secondArr
+ * @return {Array<number>}
+ */
+export const merge = (firstArr: number[], secondArr: number[]): number[] => {
+    return [];
 }
