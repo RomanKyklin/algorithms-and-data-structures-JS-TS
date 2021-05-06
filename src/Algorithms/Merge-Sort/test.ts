@@ -2,9 +2,9 @@ import {merge, mergeSort} from "./index";
 
 describe("merge sort", () => {
     it('should merge sorted arrays into one sorted array', () => {
-        const firstArray = [1, 2, 3, 4];
-        const secondArray = [8, 9, 10];
-        const expectedResult = [1, 2, 3, 4, 8, 9, 10];
+        const firstArray = [1, 10, 50];
+        const secondArray = [2, 14, 99, 100];
+        const expectedResult = [1, 2, 10, 14, 50, 99, 100];
 
         expect(merge(firstArray, secondArray)).toEqual(expectedResult);
     })

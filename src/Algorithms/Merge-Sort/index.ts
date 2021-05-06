@@ -20,5 +20,37 @@ export const mergeSort = (arr: number[]): number[] => {
  * @return {Array<number>}
  */
 export const merge = (firstArr: number[], secondArr: number[]): number[] => {
-    return [];
+    let firstArrSortedIndex = 0;
+    let secondArrSortedIndex = 0;
+    let isSorted = false;
+    let result: number[] = [];
+
+    while (!isSorted) {
+        if (!firstArr[firstArrSortedIndex]) {
+            result = [...result, ...secondArr.splice(secondArrSortedIndex, secondArr.length - 1)];
+            isSorted = true;
+            break;
+        }
+
+        if (!secondArr[secondArrSortedIndex]) {
+            result = [...result, ...firstArr.splice(firstArrSortedIndex, firstArr.length - 1)];
+            isSorted = true;
+            break;
+        }
+
+
+        if (firstArr[firstArrSortedIndex] < secondArr[secondArrSortedIndex]) {
+            result.push(firstArr[firstArrSortedIndex]);
+            firstArrSortedIndex += 1;
+        }
+
+        if (firstArr[firstArrSortedIndex] > secondArr[secondArrSortedIndex]) {
+            result.push(secondArr[secondArrSortedIndex]);
+            secondArrSortedIndex += 1;
+        }
+    }
+
+    return result;
 }
+
+console.log(merge([1, 2, 3], [6, 7, 10]))
