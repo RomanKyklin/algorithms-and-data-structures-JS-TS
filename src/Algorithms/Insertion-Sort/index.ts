@@ -9,18 +9,14 @@ export const insertionSort = (arr: number[]): number[] => {
 
     let arrCopy = [...arr];
 
-    for (let i = 0; i < arrCopy.length; i++) {
-        let tmp = arrCopy[i];
+    for (let i = 1; i < arrCopy.length; i++) {
 
-        for (var j = i - 1; j > -1 && arrCopy[i] > tmp; j--) {
-            arrCopy[j + 1] = arrCopy[j];
+        let k = i;
+        while (k > 0 && arrCopy[k - 1] > arrCopy[k]) {
+            [arrCopy[k], arrCopy[k - 1]] = [arrCopy[k - 1], arrCopy[k]];
+            k -= 1;
         }
-
-        arrCopy[j + 1] = tmp;
     }
 
     return arrCopy;
 }
-
-console.log(insertionSort([10, 5, 3]));
-// console.log(insertionSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
