@@ -7,7 +7,6 @@
 export const quickSort = (arr: number[]): number[] => {
     if (arr.length <= 1) return arr;
 
-
     return [];
 }
 
