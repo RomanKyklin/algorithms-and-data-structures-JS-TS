@@ -31,7 +31,23 @@ export class DoublyList implements IList {
     }
 
     pop(): IDoublyNode {
-        return this.head;
+        if (this.head) {
+            let result: IDoublyNode;
+
+            if (this.length === 1) {
+                [result, this.head] = [this.head, null];
+            } else {
+                result = {...this.tail};
+                this.tail = result.previous;
+                this.tail.next = null;
+            }
+
+            this.length -= 1;
+
+            return result;
+        }
+
+        return null;
     }
 
     push(element: IDoublyNode): void {
