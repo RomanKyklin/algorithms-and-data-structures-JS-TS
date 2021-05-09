@@ -5,7 +5,7 @@
  * @return {Array}
  */
 export const quickSort = (arr: number[]): number[] => {
-    if (arr.length == 0) return [];
+    if (arr.length === 0) return [];
 
     let left = [], right = [], pivot = arr[0];
 
@@ -18,6 +18,3 @@ export const quickSort = (arr: number[]): number[] => {
 
     return quickSort(left).concat(pivot, quickSort(right));
 }
-
-
-console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]))
