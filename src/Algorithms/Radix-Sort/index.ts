@@ -11,3 +11,14 @@ export const digitCount = (number: number): number => {
 
     return Math.floor(Math.log10(Math.abs(number))) + 1;
 }
+
+export const mostDigits = (arr: number[]): number => {
+    return arr.reduce((acc: number, value: number) => {
+        let maybeMax = digitCount(value);
+        acc = acc < maybeMax ? maybeMax : acc
+        return acc;
+    }, 0)
+}
+
+
+console.log(mostDigits([1234, 67, 7]));
