@@ -10,7 +10,16 @@ export class LinkedList implements IList {
     }
 
     delete(index: number): void {
+        if (!this.node) return null;
 
+        let previous = this.get(index - 1);
+
+        if (!previous) {
+            this.node = this.node.next || null;
+        } else {
+            previous.next = previous.next.next;
+        }
+        this.length -= 1;
     }
 
     get(index: number): INode | null {

@@ -54,14 +54,13 @@ describe('LinkedList', function () {
     });
 
     it('delete', () => {
-        abcRange(26).map((character: any) => list.push(character));
-        list.delete(13);
-        expect(list.length).toEqual(25);
-        expect(list.get(12)).toEqual('m');
-        expect(list.get(13)).toEqual('o');
+        list.delete(1);
+        expect(list.length).toEqual(2);
+        expect(list.get(0)).toEqual(firstNode);
+        expect(list.get(1)).toEqual(thirdNode);
         list.delete(0);
-        expect(list.length).toEqual(24);
-        expect(list.get(0)).toEqual('b');
+        expect(list.length).toEqual(1);
+        expect(list.get(0)).toEqual(thirdNode);
     });
 
 });
