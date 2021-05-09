@@ -13,19 +13,49 @@ export class LinkedList implements IList {
 
     }
 
-    get(index: number): void {
+    get(index: number): INode | null {
+        if (index === 0) return this.node;
+
+        let element: INode = this.node.next;
+        let currentIndex = 1;
+
+        while (element != null) {
+            if (currentIndex === index) return element;
+
+            element = element.next;
+            currentIndex += 1;
+        }
+
+        return null;
     }
 
-    pop(): void {
-        this.length -= 1;
+    pop(): INode {
+        if (this.node) {
+            if (this.length === 1) {
+                this.length = 0;
+                let tmp = this.node;
+                this.node = null;
+                return tmp;
+            }
+            let previousLastNode = this.get(this.length - 2);
+            let lastNode = previousLastNode.next;
+            previousLastNode.next = null;
+
+            this.length -= 1;
+
+            return lastNode;
+        }
+
+        return null;
     }
 
     push(element: INode): void {
-        this.length += 1;
-
         if (!this.node) {
             this.node = element;
+        } else {
+            let lastElement = this.get(this.length - 1);
+            lastElement.next = element;
         }
-        this.node.next = element;
+        this.length += 1;
     }
 }
