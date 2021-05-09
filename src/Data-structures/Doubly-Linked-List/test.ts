@@ -12,7 +12,11 @@ describe('Doubly Linded List', function () {
         list = new DoublyList();
         firstNode = new DoublyNode('first');
         secondNode = new DoublyNode('second');
+        firstNode.next = secondNode;
+        secondNode.previous = firstNode;
         thirdNode = new DoublyNode('third');
+        thirdNode.previous = secondNode;
+        secondNode.next = thirdNode;
         list.push(firstNode);
         list.push(secondNode);
         list.push(thirdNode);

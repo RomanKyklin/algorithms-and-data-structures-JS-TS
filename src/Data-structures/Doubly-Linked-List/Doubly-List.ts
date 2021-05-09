@@ -2,12 +2,14 @@ import {IList} from "../Linked-List/IList";
 import {IDoublyNode} from "./IDoublyNode";
 
 export class DoublyList implements IList {
-    constructor() {
-    }
 
     head: IDoublyNode;
     length: number;
     tail: IDoublyNode;
+
+    constructor() {
+        this.length = 0;
+    }
 
     delete(index: number): void {
     }
