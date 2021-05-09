@@ -1,6 +1,6 @@
 /**
  * Quick Sort algorithms implemented
- * Overall time complexity of Insertion sort is O(n2)
+ * Overall time complexity of Quick sort is O(nLogN), worst O(n^2) if arrays is partly sorted
  * @param {Array} arr
  * @return {Array}
  */
