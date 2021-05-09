@@ -27,6 +27,7 @@
 * Depth First Search Preorder
 * Depth First Search Postorder
 * Breadth-First Search
+* Dijkstra algorithm 
 
 **Data Structures List:** 
 * Array List
@@ -37,4 +38,17 @@
 * Linked List 
 * Doubly Linked List
 * Circular doubly linked list
+* Binary Tree 
+* Binary search tree
+* AVL tree
+* Red-black tree
+* Splay tree
+* Treap
+* B-tree
+* Heap
+* Hash table 
+* Weighted Graph
+* Unweighted Graph
+* Undirected Graph
+* Directed Graph
 
