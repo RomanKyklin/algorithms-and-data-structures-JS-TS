@@ -7,10 +7,15 @@
 export const quickSort = (arr: number[]): number[] => {
     if (arr.length <= 1) return arr;
 
-    return [];
+    let pivotIndex = pivot(arr);
+
+    return [
+        ...quickSort(arr.slice(0, pivotIndex + 1)),
+        ...quickSort(arr.slice(pivotIndex + 1, arr.length))
+    ];
 }
 
-export const pivot = (arr: number[], start: number = 0, end: number = arr.length + 1): number => {
+export const pivot = (arr: number[], start: number = 0, end: number = arr.length - 1): number => {
     let pivotValue = arr[start];
     let swapIndex = start;
 
@@ -21,8 +26,8 @@ export const pivot = (arr: number[], start: number = 0, end: number = arr.length
         }
     }
     [arr[swapIndex], arr[start]] = [arr[start], arr[swapIndex]];
-    console.log(arr)
+
     return swapIndex;
 }
 
-console.log(pivot([4, 8, 2, 1, 5, 7, 6, 3]));
+console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]));
