@@ -12,6 +12,16 @@ export class DoublyList implements IList {
     }
 
     delete(index: number): void {
+        if (!this.head) return null;
+
+        let elementForDelete = this.get(index);
+
+        if (!elementForDelete.previous) {
+            this.head = this.head.next || null;
+        } else {
+            elementForDelete.previous.next = elementForDelete.next;
+        }
+        this.length -= 1;
     }
 
     get(index: number): IDoublyNode {
