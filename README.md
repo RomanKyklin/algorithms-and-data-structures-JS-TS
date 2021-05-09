@@ -23,6 +23,10 @@
 * Heap Sort
 * Timsort
 * Bloom filter
+* Depth First Search Inorder
+* Depth First Search Preorder
+* Depth First Search Postorder
+* Breadth-First Search
 
 **Data Structures List:** 
 * Array List
