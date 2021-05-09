@@ -1,12 +1,12 @@
 import {IList} from "./IList";
+import {INode} from "./INode";
 
 export class LinkedList implements IList {
     public length: number;
-    private list: any[];
+    public node: INode;
 
     constructor() {
         this.length = 0;
-        this.list = [];
     }
 
     delete(index: number): void {
@@ -14,16 +14,18 @@ export class LinkedList implements IList {
     }
 
     get(index: number): void {
-        return this.list[index];
     }
 
     pop(): void {
         this.length -= 1;
-        return this.list.pop();
     }
 
-    push(element: any): void {
-        this.list.push(element);
+    push(element: INode): void {
         this.length += 1;
+
+        if (!this.node) {
+            this.node = element;
+        }
+        this.node.next = element;
     }
 }
