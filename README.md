@@ -17,6 +17,7 @@
 * Bubble Sort
 * Insertion Sort
 * Selection Sort
+* Radix Sort
 * Merge Sort 
 * Quick Sort 
 * Heap Sort
