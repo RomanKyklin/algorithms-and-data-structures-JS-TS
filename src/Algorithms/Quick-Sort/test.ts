@@ -1,9 +1,9 @@
-import {pivot, quickSort} from "./index";
+import {quickSort} from "./index";
 
 describe("quick sort", () => {
-    it('pivot helper should work correctly', () => {
-        expect(pivot([4, 8, 2, 1, 5, 7, 6, 3])).toEqual(3);
-    });
+    // it('pivot helper should work correctly', () => {
+    //     expect(pivot([4, 8, 2, 1, 5, 7, 6, 3])).toEqual(3);
+    // });
 
     it("should sort correctly", () => {
         const nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1];

@@ -5,27 +5,19 @@
  * @return {Array}
  */
 export const quickSort = (arr: number[]): number[] => {
-    if (arr.length <= 1) return arr;
+    if (arr.length == 0) return [];
 
-    let pivotIndex = pivot(arr);
+    let left = [], right = [], pivot = arr[0];
 
-    return [
-        ...quickSort(arr.slice(0, pivotIndex + 1)),
-        ...quickSort(arr.slice(pivotIndex + 1, arr.length))
-    ];
-}
-
-export const pivot = (arr: number[], start: number = 0, end: number = arr.length - 1): number => {
-    let pivotValue = arr[start];
-    let swapIndex = start;
-
-    for (let i = start + 1; i < arr.length; i++) {
-        if (pivotValue > arr[i]) {
-            swapIndex += 1;
-            [arr[swapIndex], arr[i]] = [arr[i], arr[swapIndex]];
-        }
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < pivot)
+            left.push(arr[i])
+        else
+            right.push(arr[i]);
     }
-    [arr[swapIndex], arr[start]] = [arr[start], arr[swapIndex]];
 
-    return swapIndex;
+    return quickSort(left).concat(pivot, quickSort(right));
 }
+
+
+console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]))
