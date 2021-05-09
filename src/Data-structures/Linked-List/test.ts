@@ -3,8 +3,6 @@ import {Node} from "./Node";
 import {INode} from "./INode";
 
 describe('LinkedList', function () {
-    const range = (length: number) => Array.apply(null, {length: length}).map(Number.call, Number);
-    const abcRange = (length: number) => range(length).map((num: number) => String.fromCharCode(97 + num));
     let list: LinkedList;
     let firstNode: INode;
     let secondNode: INode;
@@ -26,10 +24,10 @@ describe('LinkedList', function () {
 
     it('push', () => {
         expect(list.length).toEqual(3);
-        expect(list.node).toEqual(firstNode);
-        expect(list.node.next).toEqual(secondNode);
-        expect(list.node.next.next).toEqual(thirdNode);
-        expect(list.node.next.next.next).toEqual(null);
+        expect(list.head).toEqual(firstNode);
+        expect(list.head.next).toEqual(secondNode);
+        expect(list.head.next.next).toEqual(thirdNode);
+        expect(list.head.next.next.next).toEqual(null);
     });
 
     it('pop', () => {

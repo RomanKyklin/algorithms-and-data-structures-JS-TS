@@ -7,6 +7,9 @@
  and returns removed value
  */
 import {IArrayList} from "../Array-list/IArrayList";
+import {INode} from "./INode";
 
 export interface IList extends IArrayList {
+    head: INode;
+    tail: INode;
 }

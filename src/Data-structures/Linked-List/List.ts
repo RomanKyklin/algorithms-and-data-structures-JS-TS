@@ -3,19 +3,20 @@ import {INode} from "./INode";
 
 export class LinkedList implements IList {
     public length: number;
-    public node: INode;
+    public head: INode;
+    public tail: INode;
 
     constructor() {
         this.length = 0;
     }
 
     delete(index: number): void {
-        if (!this.node) return null;
+        if (!this.head) return null;
 
         let previous = this.get(index - 1);
 
         if (!previous) {
-            this.node = this.node.next || null;
+            this.head = this.head.next || null;
         } else {
             previous.next = previous.next.next;
         }
@@ -23,9 +24,9 @@ export class LinkedList implements IList {
     }
 
     get(index: number): INode | null {
-        if (index === 0) return this.node;
+        if (index === 0) return this.head;
 
-        let element: INode = this.node.next;
+        let element: INode = this.head.next;
         let currentIndex = 1;
 
         while (element != null) {
@@ -39,11 +40,11 @@ export class LinkedList implements IList {
     }
 
     pop(): INode {
-        if (this.node) {
+        if (this.head) {
             if (this.length === 1) {
                 this.length = 0;
-                let tmp = this.node;
-                this.node = null;
+                let tmp = this.head;
+                this.head = null;
                 return tmp;
             }
             let previousLastNode = this.get(this.length - 2);
@@ -59,12 +60,12 @@ export class LinkedList implements IList {
     }
 
     push(element: INode): void {
-        if (!this.node) {
-            this.node = element;
+        if (!this.head) {
+            this.head = element;
         } else {
-            let lastElement = this.get(this.length - 1);
-            lastElement.next = element;
+            this.tail.next = element;
         }
+        this.tail = element;
         this.length += 1;
     }
 }
