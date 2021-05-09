@@ -1,3 +1,10 @@
+/**
+ * Radix Sort algorithm implementation
+ * Time Complexity - Best: O(nk), Average: O(nk), Worst O(nk)
+ * Space Complexity - O(n + k)
+ * @return {Array<number>}
+ * @param {Array<number>} arr
+ */
 export const radixSort = (arr: number[]): number[] => {
     let mostDigitsCount = mostDigits(arr);
 
@@ -31,6 +38,3 @@ export const mostDigits = (arr: number[]): number => {
         return acc;
     }, 0)
 }
-
-
-console.log(radixSort([3000, 99, 1234, 67, 7]));
