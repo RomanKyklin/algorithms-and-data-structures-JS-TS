@@ -1,5 +1,17 @@
 export const radixSort = (arr: number[]): number[] => {
-    return [];
+    let mostDigitsCount = mostDigits(arr);
+
+    for (let k = 0; k < mostDigitsCount; k++) {
+        let digitsBucket = Array.from({length: 10}, () => []);
+
+        for (let i = 0; i < arr.length; i++) {
+            let digit = getDigit(arr[i], k);
+            digitsBucket[digit].push(arr[i]);
+        }
+        arr = [].concat(...digitsBucket);
+    }
+
+    return arr;
 }
 
 export const getDigit = (number: number, position: number): number | null => {
@@ -21,4 +33,4 @@ export const mostDigits = (arr: number[]): number => {
 }
 
 
-console.log(mostDigits([1234, 67, 7]));
+console.log(radixSort([3000, 99, 1234, 67, 7]));
