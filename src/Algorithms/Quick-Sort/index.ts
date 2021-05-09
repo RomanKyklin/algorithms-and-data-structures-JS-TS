@@ -29,5 +29,3 @@ export const pivot = (arr: number[], start: number = 0, end: number = arr.length
 
     return swapIndex;
 }
-
-console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]));
