@@ -3,9 +3,11 @@ export const radixSort = (arr: number[]): number[] => {
 }
 
 export const getDigit = (number: number, position: number): number | null => {
-    let numberAtGivenPosition = String(number)[position - 1];
-
-    return numberAtGivenPosition != null ? +(String(number)[position - 1]) : null;
+    return Math.floor(Math.abs(number) / Math.pow(10, position)) % 10;
 }
 
-console.log(getDigit(100, 4));
+export const digitCount = (number: number): number => {
+    if (number === 0) return 1;
+
+    return Math.floor(Math.log10(Math.abs(number))) + 1;
+}

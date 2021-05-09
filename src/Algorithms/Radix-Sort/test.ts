@@ -1,11 +1,18 @@
-import {getDigit, radixSort} from "./index";
+import {digitCount, getDigit, radixSort} from "./index";
 
 describe("radix sort", () => {
+    it("digit count test, should return count of digits at giver number", () => {
+        expect(digitCount(1234)).toEqual(4);
+        expect(digitCount(234)).toEqual(3);
+        expect(digitCount(34)).toEqual(2);
+        expect(digitCount(4)).toEqual(1);
+    })
+
     it("get digit helper test, should return number at given position", () => {
-        expect(getDigit(100, 1)).toEqual(1);
-        expect(getDigit(103, 2)).toEqual(0);
-        expect(getDigit(103, 3)).toEqual(3);
-        expect(getDigit(103, 4)).toEqual(null);
+        expect(getDigit(1234, 1)).toEqual(3);
+        expect(getDigit(1234, 2)).toEqual(2);
+        expect(getDigit(1234, 3)).toEqual(1);
+        expect(getDigit(1234, 4)).toEqual(0);
     })
 
     it("should sort correctly", () => {
