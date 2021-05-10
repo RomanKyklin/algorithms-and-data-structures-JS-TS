@@ -4,6 +4,7 @@ import {INode} from "./INode";
 
 describe('LinkedList', function () {
     let list: LinkedList;
+    let reversedList: LinkedList;
     let firstNode: INode;
     let secondNode: INode;
     let thirdNode: INode;
@@ -13,12 +14,20 @@ describe('LinkedList', function () {
 
     beforeEach(() => {
         list = new LinkedList();
+        reversedList = new LinkedList();
+
         firstNode = new Node('first');
         secondNode = new Node('second');
         thirdNode = new Node('third');
+
         list.push(firstNode);
         list.push(secondNode);
         list.push(thirdNode);
+
+        reversedList.push(thirdNode);
+        reversedList.push(secondNode);
+        reversedList.push(firstNode);
+
         defaultListLength = list.length;
     })
 
@@ -108,5 +117,10 @@ describe('LinkedList', function () {
         expect(insertReturnValue).toEqual(true);
         expect(list.head.next.val).toEqual(expectedValue);
         expect(list.length).toEqual(defaultListLength + 1);
+    });
+
+    it('reverse', () => {
+        list.reverse();
+        expect(list).toEqual(reversedList);
     })
 });
