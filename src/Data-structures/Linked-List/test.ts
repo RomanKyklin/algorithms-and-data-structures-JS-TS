@@ -83,4 +83,12 @@ describe('LinkedList', function () {
         deletedNode = list.shift();
         expect(deletedNode).toEqual(undefined);
     });
+
+    it('unshift', () => {
+        list.unshift(thirdNode);
+        expect(list.head).toEqual(thirdNode);
+        expect(list.head.next).toEqual(firstNode);
+        expect(list.tail).toEqual(thirdNode);
+        expect(list.length).toEqual(4);
+    })
 });

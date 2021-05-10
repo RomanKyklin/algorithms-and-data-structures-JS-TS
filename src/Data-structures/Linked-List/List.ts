@@ -83,4 +83,8 @@ export class LinkedList implements IList {
 
         return nodeForDelete;
     }
+
+    unshift(node: INode): IList {
+        return undefined;
+    }
 }
