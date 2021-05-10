@@ -6,6 +6,7 @@
  delete - function - accepts an index, removes value from list, collapses, and returns removed value
  shift -  function - replaces first element, and return replaced element
  unshift  function - added new node to the beginning of the list and returns list
+ insert   function - added new node to the given position of the list and returns true
  */
 import {IArrayList} from "../Array-list/IArrayList";
 import {INode} from "./INode";
@@ -25,4 +26,6 @@ export interface IList extends IArrayList {
     shift(): INode;
 
     unshift(value: any): IList;
+
+    insert(value: any, index: number): boolean;
 }

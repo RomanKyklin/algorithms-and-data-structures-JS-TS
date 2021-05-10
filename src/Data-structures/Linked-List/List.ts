@@ -92,4 +92,8 @@ export class LinkedList implements IList {
         this.length += 1;
         return this;
     }
+
+    insert(value: any, index: number): boolean {
+        return false;
+    }
 }
