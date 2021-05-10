@@ -65,13 +65,22 @@ describe('LinkedList', function () {
     });
 
     it('shift', () => {
-        deletedNode = list.shift(thirdNode);
+        deletedNode = list.shift();
         expect(deletedNode).toEqual(firstNode);
-        expect(list.head).toEqual(thirdNode);
-        expect(list.length).toEqual(3);
-        deletedNode = list.shift(secondNode);
-        expect(deletedNode).toEqual(thirdNode);
         expect(list.head).toEqual(secondNode);
-        expect(list.length).toEqual(3);
+        expect(list.length).toEqual(2);
+
+        deletedNode = list.shift();
+        expect(deletedNode).toEqual(secondNode);
+        expect(list.head).toEqual(thirdNode);
+        expect(list.length).toEqual(1);
+
+        deletedNode = list.shift();
+        expect(deletedNode).toEqual(thirdNode);
+        expect(list.head).toEqual(null);
+        expect(list.length).toEqual(0);
+
+        deletedNode = list.shift();
+        expect(deletedNode).toEqual(undefined);
     });
 });

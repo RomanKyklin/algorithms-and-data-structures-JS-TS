@@ -74,7 +74,13 @@ export class LinkedList implements IList {
         this.length += 1;
     }
 
-    shift(node: INode): INode {
-        return undefined;
+    shift(): INode {
+        if (!this.head) return undefined;
+
+        const nodeForDelete = this.head;
+        this.head = nodeForDelete.next;
+        this.length -= 1;
+
+        return nodeForDelete;
     }
 }

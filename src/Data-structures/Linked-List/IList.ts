@@ -21,5 +21,5 @@ export interface IList extends IArrayList {
 
     push(node: INode): void;
 
-    shift(node: INode): INode;
+    shift(): INode;
 }
