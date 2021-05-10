@@ -1,5 +1,6 @@
 import {IList} from "./IList";
 import {INode} from "./INode";
+import {Node} from "./Node";
 
 export class LinkedList implements IList {
     public length: number;
@@ -84,7 +85,11 @@ export class LinkedList implements IList {
         return nodeForDelete;
     }
 
-    unshift(node: INode): IList {
-        return undefined;
+    unshift(value: any): IList {
+        const node = new Node(value);
+        node.next = this.head;
+        this.head = node;
+        this.length += 1;
+        return this;
     }
 }

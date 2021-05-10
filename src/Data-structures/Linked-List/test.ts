@@ -85,8 +85,10 @@ describe('LinkedList', function () {
     });
 
     it('unshift', () => {
-        list.unshift(thirdNode);
-        expect(list.head).toEqual(thirdNode);
+        const expectedValue = 'forth';
+        list.unshift('forth');
+
+        expect(list.head.val).toEqual(expectedValue);
         expect(list.head.next).toEqual(firstNode);
         expect(list.tail).toEqual(thirdNode);
         expect(list.length).toEqual(4);

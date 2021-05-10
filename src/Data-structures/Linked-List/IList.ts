@@ -24,5 +24,5 @@ export interface IList extends IArrayList {
 
     shift(): INode;
 
-    unshift(node: INode): IList;
+    unshift(value: any): IList;
 }
