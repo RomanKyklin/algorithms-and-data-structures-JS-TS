@@ -10,10 +10,11 @@ export class LinkedList implements IList {
         this.length = 0;
     }
 
-    delete(index: number): void {
+    delete(index: number): INode {
         if (!this.head) return null;
 
         let previous = this.get(index - 1);
+        let elementForDelete = previous.next;
 
         if (!previous) {
             this.head = this.head.next || null;
@@ -21,6 +22,8 @@ export class LinkedList implements IList {
             previous.next = previous.next.next;
         }
         this.length -= 1;
+
+        return elementForDelete;
     }
 
     get(index: number): INode | null {
