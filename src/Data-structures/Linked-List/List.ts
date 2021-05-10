@@ -14,11 +14,13 @@ export class LinkedList implements IList {
         if (!this.head) return null;
 
         let previous = this.get(index - 1);
-        let elementForDelete = previous.next;
+        let elementForDelete: INode;
 
         if (!previous) {
+            elementForDelete = this.head || null;
             this.head = this.head.next || null;
         } else {
+            elementForDelete = previous.next;
             previous.next = previous.next.next;
         }
         this.length -= 1;

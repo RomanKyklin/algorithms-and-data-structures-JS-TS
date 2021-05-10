@@ -7,6 +7,7 @@ describe('LinkedList', function () {
     let firstNode: INode;
     let secondNode: INode;
     let thirdNode: INode;
+    let deletedNode: INode;
 
     beforeEach(() => {
         list = new LinkedList();
@@ -52,11 +53,13 @@ describe('LinkedList', function () {
     });
 
     it('delete', () => {
-        list.delete(1);
+        deletedNode = list.delete(1);
+        expect(deletedNode).toEqual(secondNode);
         expect(list.length).toEqual(2);
         expect(list.get(0)).toEqual(firstNode);
         expect(list.get(1)).toEqual(thirdNode);
-        list.delete(0);
+        deletedNode = list.delete(0);
+        expect(deletedNode).toEqual(firstNode);
         expect(list.length).toEqual(1);
         expect(list.get(0)).toEqual(thirdNode);
     });
