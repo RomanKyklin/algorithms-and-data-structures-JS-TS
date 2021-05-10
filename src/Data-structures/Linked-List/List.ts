@@ -94,6 +94,21 @@ export class LinkedList implements IList {
     }
 
     insert(value: any, index: number): boolean {
-        return false;
+        if (index < 0 || index > this.length) {
+            return false;
+        }
+
+        const node = new Node(value);
+
+        if (index === this.length) this.push(node);
+
+        if (index === 0) this.unshift(node);
+
+        const previousNode = this.get(index - 1);
+        node.next = previousNode.next;
+        previousNode.next = node;
+        this.length += 1;
+
+        return true;
     }
 }

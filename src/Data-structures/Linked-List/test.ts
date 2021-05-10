@@ -8,6 +8,8 @@ describe('LinkedList', function () {
     let secondNode: INode;
     let thirdNode: INode;
     let deletedNode: INode;
+    let insertReturnValue: boolean;
+    let defaultListLength: number;
 
     beforeEach(() => {
         list = new LinkedList();
@@ -17,6 +19,7 @@ describe('LinkedList', function () {
         list.push(firstNode);
         list.push(secondNode);
         list.push(thirdNode);
+        defaultListLength = list.length;
     })
 
     it('constructor', () => {
@@ -92,5 +95,18 @@ describe('LinkedList', function () {
         expect(list.head.next).toEqual(firstNode);
         expect(list.tail).toEqual(thirdNode);
         expect(list.length).toEqual(4);
+    })
+
+    it('insert', () => {
+        let expectedValue = 'forth';
+
+        insertReturnValue = list.insert(expectedValue, 10);
+        expect(insertReturnValue).toEqual(false);
+        expect(list.length).toEqual(defaultListLength);
+
+        insertReturnValue = list.insert(expectedValue, 1);
+        expect(insertReturnValue).toEqual(true);
+        expect(list.head.next.val).toEqual(expectedValue);
+        expect(list.length).toEqual(defaultListLength + 1);
     })
 });
