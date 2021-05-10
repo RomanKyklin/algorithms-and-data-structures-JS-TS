@@ -14,7 +14,6 @@ describe('LinkedList', function () {
 
     beforeEach(() => {
         list = new LinkedList();
-        reversedList = new LinkedList();
 
         firstNode = new Node('first');
         secondNode = new Node('second');
@@ -23,10 +22,6 @@ describe('LinkedList', function () {
         list.push(firstNode);
         list.push(secondNode);
         list.push(thirdNode);
-
-        reversedList.push(thirdNode);
-        reversedList.push(secondNode);
-        reversedList.push(firstNode);
 
         defaultListLength = list.length;
     })
@@ -120,6 +115,11 @@ describe('LinkedList', function () {
     });
 
     it('reverse', () => {
+        reversedList = new LinkedList();
+        reversedList.push(thirdNode);
+        reversedList.push(secondNode);
+        reversedList.push(firstNode);
+
         list.reverse();
         expect(list).toEqual(reversedList);
     })
