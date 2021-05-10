@@ -1,8 +1,9 @@
-import {IList} from "../Linked-List/IList";
 import {IDoublyNode} from "./IDoublyNode";
+import {IDoublyList} from "./IDoublyList";
+import {DoublyNode} from "./DoublyNode";
+import {Node} from "../Linked-List/Node";
 
-export class DoublyList implements IList {
-
+export class DoublyList implements IDoublyList {
     head: IDoublyNode;
     length: number;
     tail: IDoublyNode;
@@ -11,7 +12,7 @@ export class DoublyList implements IList {
         this.length = 0;
     }
 
-    delete(index: number): void {
+    delete(index: number): IDoublyNode {
         if (!this.head) return null;
 
         let elementForDelete = this.get(index);
@@ -69,5 +70,45 @@ export class DoublyList implements IList {
         }
         this.tail = element;
         this.length += 1;
+    }
+
+    insert(value: any, index: number): boolean {
+        if (index < 0 || index > this.length) {
+            return false;
+        }
+
+        const node = new DoublyNode(value);
+
+        if (index === this.length) this.push(node);
+
+        if (index === 0) this.unshift(node);
+
+        const previousNode = this.get(index - 1);
+        node.next = previousNode.next;
+        previousNode.next = node;
+        this.length += 1;
+
+        return true;
+    }
+
+    shift(): IDoublyNode {
+        if (!this.head) return undefined;
+
+        const nodeForDelete = this.head;
+        this.head = nodeForDelete.next;
+        this.length -= 1;
+
+        return nodeForDelete;
+    }
+
+    unshift(value: any): IDoublyList {
+        const node = new DoublyNode(value);
+        node.next = this.head;
+        this.head = node;
+        this.length += 1;
+        return this;
+    }
+
+    reverse(): void {
     }
 }
