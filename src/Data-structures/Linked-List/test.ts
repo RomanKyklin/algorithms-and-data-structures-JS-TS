@@ -64,4 +64,14 @@ describe('LinkedList', function () {
         expect(list.get(0)).toEqual(thirdNode);
     });
 
+    it('shift', () => {
+        deletedNode = list.shift(thirdNode);
+        expect(deletedNode).toEqual(firstNode);
+        expect(list.head).toEqual(thirdNode);
+        expect(list.length).toEqual(3);
+        deletedNode = list.shift(secondNode);
+        expect(deletedNode).toEqual(thirdNode);
+        expect(list.head).toEqual(secondNode);
+        expect(list.length).toEqual(3);
+    });
 });
