@@ -12,4 +12,6 @@ import {INode} from "./INode";
 export interface IList extends IArrayList {
     head: INode;
     tail: INode;
+
+    shift(node: INode): INode;
 }

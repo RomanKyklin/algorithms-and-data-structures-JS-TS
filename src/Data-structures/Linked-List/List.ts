@@ -68,4 +68,8 @@ export class LinkedList implements IList {
         this.tail = element;
         this.length += 1;
     }
+
+    shift(node: INode): INode {
+        return undefined;
+    }
 }
