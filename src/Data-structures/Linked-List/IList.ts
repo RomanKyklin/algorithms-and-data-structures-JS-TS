@@ -7,6 +7,7 @@
  shift -  function - replaces first element, and return replaced element
  unshift  function - added new node to the beginning of the list and returns list
  insert   function - added new node to the given position of the list and returns true
+ reverse  function - reversed the list and return void
  */
 import {IArrayList} from "../Array-list/IArrayList";
 import {INode} from "./INode";
@@ -28,4 +29,6 @@ export interface IList extends IArrayList {
     unshift(value: any): IList;
 
     insert(value: any, index: number): boolean;
+
+    reverse(): void;
 }

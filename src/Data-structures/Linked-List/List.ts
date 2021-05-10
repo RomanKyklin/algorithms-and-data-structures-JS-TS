@@ -111,4 +111,7 @@ export class LinkedList implements IList {
 
         return true;
     }
+
+    reverse(): void {
+    }
 }
