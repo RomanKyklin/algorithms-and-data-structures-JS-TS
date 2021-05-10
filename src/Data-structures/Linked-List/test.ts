@@ -8,6 +8,8 @@ describe('LinkedList', function () {
     let firstNode: INode;
     let secondNode: INode;
     let thirdNode: INode;
+    let forthNode: INode;
+    let fifthNode: INode;
     let deletedNode: INode;
     let insertReturnValue: boolean;
     let defaultListLength: number;
@@ -18,6 +20,8 @@ describe('LinkedList', function () {
         firstNode = new Node('first');
         secondNode = new Node('second');
         thirdNode = new Node('third');
+        forthNode = new Node('forth');
+        fifthNode = new Node('fifth');
 
         list.push(firstNode);
         list.push(secondNode);
@@ -113,14 +117,4 @@ describe('LinkedList', function () {
         expect(list.head.next.val).toEqual(expectedValue);
         expect(list.length).toEqual(defaultListLength + 1);
     });
-
-    it('reverse', () => {
-        reversedList = new LinkedList();
-        reversedList.push(thirdNode);
-        reversedList.push(secondNode);
-        reversedList.push(firstNode);
-
-        list.reverse();
-        expect(list).toEqual(reversedList);
-    })
 });

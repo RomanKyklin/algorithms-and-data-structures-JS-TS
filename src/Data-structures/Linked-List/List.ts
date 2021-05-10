@@ -32,6 +32,8 @@ export class LinkedList implements IList {
     get(index: number): INode | null {
         if (index === 0) return this.head;
 
+        if(index > 0 && index === this.length - 1) return this.tail;
+
         let element: INode = this.head.next;
         let currentIndex = 1;
 
@@ -41,7 +43,7 @@ export class LinkedList implements IList {
             element = element.next;
             currentIndex += 1;
         }
-
+        console.log(currentIndex, this)
         return null;
     }
 
@@ -112,6 +114,36 @@ export class LinkedList implements IList {
         return true;
     }
 
-    reverse(): void {
-    }
+    // reverse(): void {
+    //     if (this.length <= 1) return;
+    //
+    //     let node = this.head;
+    //     let prevTail = this.get(this.length - 1);
+    //
+    //     [this.head, this.tail] = [this.tail, this.head];
+    //
+    //     this.head.next = node.next;
+    //     this.tail.next = null;
+    //     prevTail.next = this.tail;
+    //
+    //     let next;
+    //     let prev;
+    //     let currentIndex = 1;
+    //
+    //     while (node.next !== this.tail) {
+    //         next = node.next;
+    //         prev = this.get(currentIndex - 1);
+    //         console.log(currentIndex - 1, prev)
+    //         prev.next = next;
+    //
+    //
+    //         if (next) {
+    //             node.next = next.next;
+    //             next.next = node;
+    //
+    //         }
+    //
+    //         currentIndex += 1;
+    //     }
+    // }
 }

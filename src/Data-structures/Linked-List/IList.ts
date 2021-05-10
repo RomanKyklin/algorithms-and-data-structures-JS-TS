@@ -29,6 +29,4 @@ export interface IList extends IArrayList {
     unshift(value: any): IList;
 
     insert(value: any, index: number): boolean;
-
-    reverse(): void;
 }
