@@ -1,7 +1,6 @@
 import {IDoublyNode} from "./IDoublyNode";
 import {IDoublyList} from "./IDoublyList";
 import {DoublyNode} from "./DoublyNode";
-import {Node} from "../Linked-List/Node";
 
 export class DoublyList implements IDoublyList {
     head: IDoublyNode;
