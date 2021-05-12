@@ -45,7 +45,8 @@ describe('Circular Doubly Linked List', function () {
         expect(list.head).toEqual(firstNode);
         expect(list.head.next).toEqual(secondNode);
         expect(list.head.next.next).toEqual(thirdNode);
-        expect(list.head.next.next.next).toEqual(null);
+        expect(list.head.next.next.next).toEqual(firstNode);
+        expect((list.head as ICircularListNode).previous).toEqual(thirdNode);
     });
 
     it('pop', () => {

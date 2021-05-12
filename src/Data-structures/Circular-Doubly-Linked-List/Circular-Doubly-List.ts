@@ -89,6 +89,8 @@ export class CircularDoublyList implements ICircularDoublyList {
         } else {
             this.tail.next = node;
             node.previous = this.tail;
+            node.next = this.head;
+            this.head.previous = node;
         }
         this.tail = node;
         this.length += 1;
