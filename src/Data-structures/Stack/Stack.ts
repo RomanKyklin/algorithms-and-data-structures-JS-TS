@@ -1,5 +1,6 @@
 import {IStack} from "./IStack";
 import {INode} from "./INode";
+import {Node} from "./Node";
 
 export class Stack implements IStack {
     first: INode;
@@ -12,10 +13,23 @@ export class Stack implements IStack {
         this.size = 0;
     }
 
-    pop(): any {
+    pop(): INode {
+        return this.first;
     }
 
     push(value: any): number {
-        return 0;
+        const newNode = new Node(value);
+
+        if (!this.first) {
+            this.first = newNode;
+            this.last = this.first;
+        } else {
+            let tmp = this.last;
+            this.last.next = newNode;
+            this.last = tmp;
+        }
+        this.size += 1;
+
+        return this.size;
     }
 }

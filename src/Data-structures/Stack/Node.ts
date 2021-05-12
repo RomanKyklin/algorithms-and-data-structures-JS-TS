@@ -4,8 +4,8 @@ export class Node implements INode {
     next: INode;
     value: any;
 
-    constructor() {
+    constructor(value: any) {
         this.next = null;
-        this.value = null;
+        this.value = value;
     }
 }

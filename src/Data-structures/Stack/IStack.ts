@@ -7,5 +7,5 @@ export interface IStack {
 
     push(value: any): number;
 
-    pop(): any;
+    pop(): INode;
 }
