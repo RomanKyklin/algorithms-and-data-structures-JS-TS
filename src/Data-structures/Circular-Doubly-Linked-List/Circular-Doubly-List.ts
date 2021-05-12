@@ -19,7 +19,7 @@ export class CircularDoublyList implements ICircularDoublyList {
 
         let elementForDelete = this.get(index);
 
-        if (!elementForDelete.previous) {
+        if (!elementForDelete.previous || index === 0) {
             this.head = this.head.next || null;
         } else {
             elementForDelete.previous.next = elementForDelete.next;
@@ -29,6 +29,8 @@ export class CircularDoublyList implements ICircularDoublyList {
     }
 
     get(index: number): ICircularListNode {
+        if (index >= this.length) return null;
+
         if (index === 0) return this.head;
 
         let element: IDoublyNode = this.head.next;
@@ -117,7 +119,14 @@ export class CircularDoublyList implements ICircularDoublyList {
         if (!this.head) return undefined;
 
         const nodeForDelete = this.head;
-        this.head = nodeForDelete.next;
+
+        if (this.length === 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = nodeForDelete.next;
+            this.head.previous = this.tail;
+        }
         this.length -= 1;
 
         return nodeForDelete;
