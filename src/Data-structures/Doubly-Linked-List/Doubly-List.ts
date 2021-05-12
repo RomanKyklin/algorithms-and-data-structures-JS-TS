@@ -22,6 +22,7 @@ export class DoublyList implements IDoublyList {
             elementForDelete.previous.next = elementForDelete.next;
         }
         this.length -= 1;
+        return elementForDelete;
     }
 
     get(index: number): IDoublyNode {
