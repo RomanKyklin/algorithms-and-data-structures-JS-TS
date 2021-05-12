@@ -129,15 +129,6 @@ describe('Doubly Linded List', function () {
 
         list.reverse();
         expect(list).toEqual(reversedList);
-
-        list.reverse();
-        reversedList.unshift('forth');
-        reversedList.unshift('fifth');
-
-        list.push(new DoublyNode('fifth'));
-        list.push(new DoublyNode('forth'));
-        list.reverse();
-        expect(list).toEqual(reversedList);
     })
 
     it('should reverse with 5 elements', () => {

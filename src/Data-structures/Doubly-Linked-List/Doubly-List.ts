@@ -116,12 +116,13 @@ export class DoublyList implements IDoublyList {
         let prev: IDoublyNode;
         let node: IDoublyNode = this.head;
 
-        for (let i = 0; i < this.length; i++) {
+        do {
             next = node.next;
             node.next = prev;
             prev = node;
             node = next;
-        }
+        } while (next);
+
         return this;
     }
 }
