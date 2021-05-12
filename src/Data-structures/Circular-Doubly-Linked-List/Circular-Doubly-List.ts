@@ -7,6 +7,9 @@ export class CircularDoublyList implements ICircularDoublyList {
     tail: ICircularListNode;
 
     constructor() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
     }
 
     delete(index: number): ICircularListNode {
