@@ -12,5 +12,5 @@ import {IList} from "../Linked-List/IList";
  reverse  function - reversed the list and return void
  */
 export interface IDoublyList extends IList {
-    reverse(): void;
+    reverse(): IDoublyList;
 }
