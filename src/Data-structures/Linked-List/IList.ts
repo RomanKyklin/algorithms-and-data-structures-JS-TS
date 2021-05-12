@@ -13,22 +13,25 @@ import {IArrayList} from "../Array-list/IArrayList";
 import {INode} from "./INode";
 import {IDoublyNode} from "../Doubly-Linked-List/IDoublyNode";
 import {IDoublyList} from "../Doubly-Linked-List/IDoublyList";
+import {ICircularListNode} from "../Circular-Doubly-Linked-List/ICircularListNode";
+import {ICircularDoublyList} from "../Circular-Doubly-Linked-List/ICircularDoublyList";
 
 export interface IList extends IArrayList {
-    head: INode;
-    tail: INode;
+    head: INode | IDoublyNode | ICircularListNode;
+    tail: INode | IDoublyNode | ICircularListNode;
+    length: number;
 
-    delete(index: number): INode | IDoublyNode;
+    delete(index: number): INode | IDoublyNode | ICircularListNode;
 
-    get(index: number): INode | IDoublyNode;
+    get(index: number): INode | IDoublyNode | ICircularListNode;
 
-    pop(): INode | IDoublyNode;
+    pop(): INode | IDoublyNode | ICircularListNode;
 
     push(node: INode | IDoublyNode): void;
 
-    shift(): INode | IDoublyNode;
+    shift(): INode | IDoublyNode | ICircularListNode;
 
-    unshift(value: any): IList | IDoublyList;
+    unshift(value: any): IList | IDoublyList | ICircularDoublyList;
 
     insert(value: any, index: number): boolean;
 }

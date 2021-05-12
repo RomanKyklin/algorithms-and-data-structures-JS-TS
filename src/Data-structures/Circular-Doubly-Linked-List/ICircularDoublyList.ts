@@ -1,5 +1,4 @@
-import {IList} from "../Linked-List/IList";
-import {ICircularDoublyList} from "../Circular-Doubly-Linked-List/ICircularDoublyList";
+import {IDoublyList} from "../Doubly-Linked-List/IDoublyList";
 
 /**
  BigO of List: Insertion - O(1), Removal - O(1) or O(n), Searching - O(n), Access - O(n)
@@ -13,6 +12,6 @@ import {ICircularDoublyList} from "../Circular-Doubly-Linked-List/ICircularDoubl
  insert   function - added new node to the given position of the list and returns true
  reverse  function - reversed the list and return void
  */
-export interface IDoublyList extends IList {
-    reverse(): IDoublyList | ICircularDoublyList;
+export interface ICircularDoublyList extends IDoublyList {
+
 }
