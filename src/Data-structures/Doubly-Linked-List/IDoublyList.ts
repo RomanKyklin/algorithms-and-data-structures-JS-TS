@@ -1,6 +1,7 @@
 import {IList} from "../Linked-List/IList";
 
 /**
+ BigO of List: Insertion - O(1), Removal - O(1) or O(n), Searching - O(n), Access - O(n)
  length - integer  - How many elements in the list
  push   - function - accepts a value and adds to the end of the list
  pop    - function - removes the last value in the list and returns it
