@@ -27,7 +27,7 @@ export interface IList extends IArrayList {
 
     pop(): INode | IDoublyNode | ICircularListNode;
 
-    push(node: INode | IDoublyNode): void;
+    push(node: INode | IDoublyNode | ICircularListNode): void;
 
     shift(): INode | IDoublyNode | ICircularListNode;
 
