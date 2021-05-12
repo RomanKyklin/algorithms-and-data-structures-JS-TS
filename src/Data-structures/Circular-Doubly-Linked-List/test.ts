@@ -24,6 +24,8 @@ describe('Circular Doubly Linked List', function () {
         thirdNode = new CircularListNode('third');
         thirdNode.previous = secondNode;
         secondNode.next = thirdNode;
+        firstNode.previous = thirdNode;
+        thirdNode.next = firstNode;
         list.push(firstNode);
         list.push(secondNode);
         list.push(thirdNode);
