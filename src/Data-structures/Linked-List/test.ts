@@ -4,7 +4,6 @@ import {INode} from "./INode";
 
 describe('LinkedList', function () {
     let list: LinkedList;
-    let reversedList: LinkedList;
     let firstNode: INode;
     let secondNode: INode;
     let thirdNode: INode;
