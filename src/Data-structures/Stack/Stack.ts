@@ -14,16 +14,16 @@ export class Stack implements IStack {
     }
 
     pop(): INode {
-        let currentNode: INode = this.first;
-        while (currentNode) {
-            if (currentNode.next === this.last) {
-                this.last = currentNode.next;
-                break;
-            }
-            currentNode = currentNode.next;
+        if (!this.first) return null;
+
+        let tmp = this.first;
+
+        if (this.first === this.last) {
+            this.last = null;
         }
+        this.first = this.first.next;
         this.size -= 1;
-        return this.last;
+        return tmp;
     }
 
     push(value: any): number {
@@ -31,10 +31,11 @@ export class Stack implements IStack {
 
         if (!this.first) {
             this.first = newNode;
-            this.last = this.first;
-        } else {
-            this.last.next = newNode;
             this.last = newNode;
+        } else {
+            const tmp = this.first;
+            this.first = newNode;
+            this.first.next = tmp;
         }
         this.size += 1;
 
