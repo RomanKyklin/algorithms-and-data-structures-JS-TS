@@ -5,6 +5,6 @@ export interface IQueue {
     last: INode;
     size: number;
 
-    enqueue(value: any): INode;
+    enqueue(value: any): number;
     dequeue(): INode;
 }
