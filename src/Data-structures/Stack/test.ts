@@ -13,24 +13,25 @@ describe('Stack', function () {
         stack = new Stack();
         firstNode = new Node('first');
         secondNode = new Node('second');
+        firstNode.next = secondNode;
         thirdNode = new Node('third');
+        secondNode.next = thirdNode;
 
-        stack.push(firstNode);
-        stack.push(secondNode);
-        stack.push(thirdNode);
+        stack.push('first');
+        stack.push('second');
+        stack.push('third');
     });
 
     it('should correctly set first, last and size', function () {
+        expect(stack.size).toEqual(3);
         expect(stack.first).toEqual(firstNode);
         expect(stack.last).toEqual(thirdNode);
-        expect(stack.size).toEqual(3);
     })
 
     it('should push', function () {
         let pushedNode = new Node('forth');
-        let returnedValue = stack.push(pushedNode);
+        let returnedValue = stack.push('forth');
         expect(stack.last).toEqual(pushedNode);
-        expect(thirdNode.next).toEqual(pushedNode);
         expect(returnedValue).toEqual(4);
         expect(stack.size).toEqual(4);
     });

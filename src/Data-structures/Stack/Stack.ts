@@ -14,7 +14,16 @@ export class Stack implements IStack {
     }
 
     pop(): INode {
-        return this.first;
+        let currentNode: INode = this.first;
+        while (currentNode) {
+            if (currentNode.next === this.last) {
+                this.last = currentNode.next;
+                break;
+            }
+            currentNode = currentNode.next;
+        }
+        this.size -= 1;
+        return this.last;
     }
 
     push(value: any): number {
@@ -24,9 +33,8 @@ export class Stack implements IStack {
             this.first = newNode;
             this.last = this.first;
         } else {
-            let tmp = this.last;
             this.last.next = newNode;
-            this.last = tmp;
+            this.last = newNode;
         }
         this.size += 1;
 
