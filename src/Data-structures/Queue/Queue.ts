@@ -2,6 +2,14 @@ import {IQueue} from "./IQueue";
 import {INode} from "./INode";
 import {Node} from './Node';
 
+/**
+ * Queue data structure class implementation
+ * BigO of Queue:
+ * Insertion - O(1)
+ * Removal - O(1)
+ * Searching - O(n)
+ * Access - O(n)
+ */
 export class Queue implements IQueue {
     first: INode;
     last: INode;
