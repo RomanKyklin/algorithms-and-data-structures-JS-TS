@@ -2,6 +2,14 @@ import {IStack} from "./IStack";
 import {INode} from "./INode";
 import {Node} from "./Node";
 
+/**
+ * Stack class implementation
+ * BigO of Stacks:
+ * Insertion - O(1)
+ * Removal - O(1)
+ * Searching - O(n)
+ * Access - O(n)
+ */
 export class Stack implements IStack {
     first: INode;
     last: INode;
