@@ -59,5 +59,5 @@
 * Unweighted Graph
 * Undirected Graph
 * Directed Graph
-* State machines / finite state machines
+* State machines / finite state machines 
 
