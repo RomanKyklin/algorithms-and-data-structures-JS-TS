@@ -10,7 +10,7 @@
 
 **Algorithms List:**
 * Greatest common divisor 
-* Linear Search 
+* Linear Search
 * Binary Search
 * Naive String Search
 * Factorials (recursive and iterative solution) 
