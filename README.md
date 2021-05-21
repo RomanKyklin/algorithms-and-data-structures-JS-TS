@@ -9,7 +9,7 @@
 * Backtracking
 
 **Algorithms List:**
-* Greatest common divisor 
+* Greatest common divisor
 * Linear Search
 * Binary Search
 * Naive String Search
