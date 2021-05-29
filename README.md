@@ -4,7 +4,7 @@
 * Multiple Pointers
 * Sliding window 
 * Devide and Conquer 
-* Dynamic programming
+* Dynamic programming 
 * Greedy algorithms 
 * Backtracking
 
