@@ -5,7 +5,7 @@
 * Sliding window 
 * Devide and Conquer 
 * Dynamic programming 
-* Greedy algorithms 
+* Greedy algorithms
 * Backtracking
 
 **Algorithms List:**
