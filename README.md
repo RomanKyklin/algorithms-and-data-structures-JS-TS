@@ -2,7 +2,7 @@
 **Problem solving patterns:**
 * Frequency counters
 * Multiple Pointers
-* Sliding window 
+* Sliding window
 * Devide and Conquer 
 * Dynamic programming 
 * Greedy algorithms
