@@ -28,6 +28,7 @@
 * Quick Sort 
 * Heap Sort
 * Timsort
+* Topological sort
 * Bloom filter
 * Depth First Search Inorder
 * Depth First Search Preorder
@@ -35,6 +36,9 @@
 * Breadth-First Search
 * Dijkstra algorithm 
 * Huffman Coding Algorithm
+* Kadane's algorithm
+* Knuth morris pratt algorithm
+* A* algorithm
 * Recurrence relations
 * Longest increasing subsequence
 * Levenshtein distance
