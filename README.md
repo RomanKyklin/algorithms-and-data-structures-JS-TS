@@ -73,4 +73,5 @@
 * Two Number Sum (algoexpert.io)
 * Validate subsequence (algoexpert.io)
 * Sorted Squared Array (algoexpert.io)
+* Tournament winner (algoexpert.io)
 
