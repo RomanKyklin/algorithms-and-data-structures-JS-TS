@@ -1,16 +1,20 @@
 # Most known Algorithms and Data Structures implementation with TypeScript. All code is covered with tests. List of implemented items below.
+**Useful topics:**
+* Bitwise operations
+* Bitmasks 
+
 **Problem solving patterns:**
 * Frequency counters
 * Multiple Pointers
-* Sliding window 
+* Sliding window
 * Devide and Conquer 
 * Dynamic programming 
-* Greedy algorithms 
+* Greedy algorithms
 * Backtracking
 
 **Algorithms List:**
-* Greatest common divisor 
-* Linear Search
+* Greatest common divisor
+* Linear Search 
 * Binary Search
 * Naive String Search
 * Factorials (recursive and iterative solution) 
@@ -24,6 +28,7 @@
 * Quick Sort 
 * Heap Sort
 * Timsort
+* Topological sort
 * Bloom filter
 * Depth First Search Inorder
 * Depth First Search Preorder
@@ -31,6 +36,9 @@
 * Breadth-First Search
 * Dijkstra algorithm 
 * Huffman Coding Algorithm
+* Kadane's algorithm
+* Knuth morris pratt algorithm
+* A* algorithm
 * Recurrence relations
 * Longest increasing subsequence
 * Levenshtein distance
