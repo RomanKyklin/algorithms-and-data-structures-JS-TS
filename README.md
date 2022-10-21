@@ -76,5 +76,5 @@
 * Tournament winner (algoexpert.io)
 * Non constructuble change (algoexpert.io)
 * Three numbers sum (algoexpert.io)
-* Smallest difference (algoexpert.io) 
+* Smallest difference (algoexpert.io)
 
