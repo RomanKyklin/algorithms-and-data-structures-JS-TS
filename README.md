@@ -1,6 +1,6 @@
 # Most known Algorithms and Data Structures implementation with TypeScript. All code is covered with tests. List of implemented items below.
 **Useful topics:**
-* Bitwise operations
+* Bitwise operations 
 * Bitmasks 
 
 **Problem solving patterns:**
