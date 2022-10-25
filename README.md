@@ -2,7 +2,7 @@
 **Useful topics:**
 * Bitwise operations 
 * Bitmasks 
-
+ 
 **Problem solving patterns:**
 * Frequency counters
 * Multiple Pointers
