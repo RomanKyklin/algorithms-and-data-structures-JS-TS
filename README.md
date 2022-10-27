@@ -3,7 +3,7 @@
 * Bitwise operations 
 * Bitmasks 
  
-**Problem solving patterns:**
+**Problem solving patterns:** 
 * Frequency counters
 * Multiple Pointers
 * Sliding window
